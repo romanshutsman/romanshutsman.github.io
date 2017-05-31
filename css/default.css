@@ -1,0 +1,163 @@
+/* ------ Общие стили
+-----------------------------------------------*/
+
+
+.pd{
+padding:10px;
+background:#B0AFAF;
+float:left;
+clear:both;
+width:100%;
+margin-bottom:10px;
+font-weight: bold;
+}
+
+.code_sample{
+float:left;
+}
+
+/* ------ Стили для mobilyslider
+-----------------------------------------------*/
+
+#content {
+width: 405px;
+
+margin:100px auto 0;
+}
+
+.slider {
+float:left;
+width: 405px;
+height: 540px;
+position:relative;
+padding-bottom:26px;
+background:url(../gfx/bottom_shadow.png) no-repeat bottom center;
+}
+
+.sliderContent {
+float:left;
+width: 405px;
+height: 540px;
+clear:both;
+position:relative;
+overflow:hidden;
+}
+
+.sliderArrows a {
+display:block;
+text-indent:-9999px;
+outline:none;
+z-index:50;
+background-image:url(../gfx/prev_next.png);
+width:42px;
+height:42px;
+position:absolute;
+top:50%;
+margin-top:-34px;
+}
+
+.prev {
+background-position:0 0;
+left:15px;
+}
+
+.prev:hover {
+background-position:0 -44px;
+}
+
+.next {
+right:15px;
+background-position:-44px 0;
+}
+
+.next:hover {
+background-position:-44px -44px;
+}
+
+.sliderContent .item {
+position:absolute;
+width: 405px;
+height: 540px;
+background:#fff;
+}
+
+.sliderBullets {
+position:absolute;
+bottom:0;
+left:50%;
+z-index:50;
+margin-left:-45px;
+}
+
+.sliderBullets a {
+display:block;
+float:left;
+text-indent:-9999px;
+outline:none;
+margin-left:5px;
+width:10px;
+height:11px;
+background:url(../gfx/bullets.png) no-repeat;
+}
+
+.sliderBullets .active {
+background-position:0 -11px;
+}
+
+.sliderContent a {
+outline:none;
+}
+
+a {
+color:#fff;
+}
+
+a img {
+border:none;
+}
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 570px){
+
+.slider  .item .sliderContent   {
+width: 350px;
+height: 485px;
+}
+
+}
+@media screen and (max-width: 500px){
+
+.slider .item  .sliderContent  {
+width: 300px;
+height: 435px;
+}
+
+}
+
+@media screen and (max-width: 400px){
+
+.slider  .item .sliderContent    {
+width: 250px;
+height: 385px;
+}
+
+}
+
+
+@media screen and (max-width: 320px){
+
+.slider .item  .sliderContent  {
+width: 250px;
+height: 385px;
+}
+
+}
+
+
