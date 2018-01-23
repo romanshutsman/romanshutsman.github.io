@@ -1,0 +1,23 @@
+{
+  "name": "romanshutsman.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/romanshutsman/romanshutsman.github.io.git"
+  },
+  "author": "Roman Shutsman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/romanshutsman/romanshutsman.github.io/issues"
+  },
+  "homepage": "https://github.com/romanshutsman/romanshutsman.github.io#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0"
+  }
+}
