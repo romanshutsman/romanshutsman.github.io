@@ -2,20 +2,113 @@ html {
     font-size: 16px;
 }
 
+@font-face {
+    font-family: 'Nexa-Black';
+    src: url('../fonts/Nexa-Black.otf');
+}
+@font-face {
+    font-family: 'Nexa-Bold';
+    src: url('../fonts/Nexa-Bold.otf');
+}
+@font-face {
+    font-family: 'PT_Sans-Web-Bold';
+    src: url('../fonts/PT_Sans-Web-Bold.ttf');
+}
+@font-face {
+    font-family: 'PT_Sans-Web-Italic';
+    src: url('../fonts/PT_Sans-Web-Italic.ttf');
+}
 $nexaBlack: 'Nexa-Black';
+$nexaBold: 'Nexa-Bold';
+$ptSansItalic: 'PT_Sans-Web-Italic';
 $ptSansBold: 'PT_Sans-Web-Bold';
+
 $maincolor: #6017a3;
 $colortext: #707070;
 $lightcolor: #d5d5d5;
-
+    a:link, a:visited , a:active, a:hover {
+    text-decoration: none;
+}
 .container {
     width: 100%;
     max-width: 940px;
     margin: 0 auto;
-    display: flex;
+    padding: 5px;
 }
-header > section{
+header{
+    background: #ebebeb;
+}
+
+header .container section.logo{
     display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    justify-content: space-between;
     height: 130px;
-    background:$colortext;
+}
+header .container section.logo a,form{
+    align-self: center;
+}
+
+section.logo {
+    a {
+        img.logo-img{
+        float: left;
+        padding-right: 7px;
+        position: relative;
+        top: 7px;
+        }
+        .logo-main-text{
+            font-size: 2.438rem;
+            font-family:$nexaBlack;
+            color: $maincolor;
+        }
+        .logo-main-info{
+            font-size: 0.75rem;
+            font-family: $ptSansItalic;
+            color: #9f9f9f;
+    }
+  }
+    a:nth-child(n+2){
+        font-family: $nexaBold;
+        font-size: 0.75rem;
+        color: $lightcolor;
+        transition: color .4s ease;
+        &:hover{
+            color: $maincolor;
+        }
+    }
+    a:nth-child(2){
+        span{
+            position: relative;
+            top: -4px;
+            margin-right: 5px;
+        }
+    }
+    a:nth-child(3){
+        span{
+            transform: rotate(90deg);
+            display: inline-block;
+        }
+    }    
+}
+section.logo a:first-child {
+    flex-basis: 237px;
+}
+input[type="search"].main-search {
+    width: 300px;
+    height: 46px;
+    outline: none;
+    border: none;
+}
+    input[type="search"].main-search::-webkit-input-placeholder {
+    font-family: $nexaBold;
+    font-size: 0.75rem;
+    color:$lightcolor;
+    padding-left: 20px;
+}
+    input[type="image"].search-img {
+    position: relative;
+    top:7px;
+    right: 40px;
 }

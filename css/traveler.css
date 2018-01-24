@@ -2,15 +2,114 @@ html {
   font-size: 16px;
 }
 
+@font-face {
+  font-family: 'Nexa-Black';
+  src: url("../fonts/Nexa-Black.otf");
+}
+
+@font-face {
+  font-family: 'Nexa-Bold';
+  src: url("../fonts/Nexa-Bold.otf");
+}
+
+@font-face {
+  font-family: 'PT_Sans-Web-Bold';
+  src: url("../fonts/PT_Sans-Web-Bold.ttf");
+}
+
+@font-face {
+  font-family: 'PT_Sans-Web-Italic';
+  src: url("../fonts/PT_Sans-Web-Italic.ttf");
+}
+
+a:link, a:visited, a:active, a:hover {
+  text-decoration: none;
+}
+
 .container {
   width: 100%;
   max-width: 940px;
   margin: 0 auto;
-  display: flex;
+  padding: 5px;
 }
 
-header > section {
+header {
+  background: #ebebeb;
+}
+
+header .container section.logo {
   display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  justify-content: space-between;
   height: 130px;
-  background: #707070;
+}
+
+header .container section.logo a, form {
+  align-self: center;
+}
+
+section.logo a img.logo-img {
+  float: left;
+  padding-right: 7px;
+  position: relative;
+  top: 7px;
+}
+
+section.logo a .logo-main-text {
+  font-size: 2.438rem;
+  font-family: "Nexa-Black";
+  color: #6017a3;
+}
+
+section.logo a .logo-main-info {
+  font-size: 0.75rem;
+  font-family: "PT_Sans-Web-Italic";
+  color: #9f9f9f;
+}
+
+section.logo a:nth-child(n+2) {
+  font-family: "Nexa-Bold";
+  font-size: 0.75rem;
+  color: #d5d5d5;
+  transition: color .4s ease;
+}
+
+section.logo a:nth-child(n+2):hover {
+  color: #6017a3;
+}
+
+section.logo a:nth-child(2) span {
+  position: relative;
+  top: -4px;
+  margin-right: 5px;
+}
+
+section.logo a:nth-child(3) span {
+  transform: rotate(90deg);
+  display: inline-block;
+}
+
+section.logo a:first-child {
+  flex-basis: 237px;
+}
+
+input[type="search"].main-search {
+  width: 300px;
+  height: 46px;
+  outline: none;
+  border: none;
+}
+
+input[type="search"].main-search::-webkit-input-placeholder {
+  font-family: "Nexa-Bold";
+  font-size: 0.75rem;
+  color: #d5d5d5;
+  padding-left: 20px;
+}
+
+input[type="image"].search-img {
+  position: relative;
+  top: 7px;
+  right: 40px;
 }
