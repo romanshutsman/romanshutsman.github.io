@@ -6,4 +6,11 @@ html {
   width: 100%;
   max-width: 940px;
   margin: 0 auto;
+  display: flex;
+}
+
+header > section {
+  display: flex;
+  height: 130px;
+  background: #707070;
 }

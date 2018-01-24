@@ -1,4 +1,21 @@
-$primaryColor: #eeffcc;
-body {
-    background: $primaryColor;
+html {
+    font-size: 16px;
+}
+
+$nexaBlack: 'Nexa-Black';
+$ptSansBold: 'PT_Sans-Web-Bold';
+$maincolor: #6017a3;
+$colortext: #707070;
+$lightcolor: #d5d5d5;
+
+.container {
+    width: 100%;
+    max-width: 940px;
+    margin: 0 auto;
+    display: flex;
+}
+header > section{
+    display: flex;
+    height: 130px;
+    background:$colortext;
 }
