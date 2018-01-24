@@ -1,3 +1,9 @@
-body {
-  background: #eeffcc;
+html {
+  font-size: 16px;
+}
+
+.container {
+  width: 100%;
+  max-width: 940px;
+  margin: 0 auto;
 }
