@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <script type="text/javascript">
+ var HttpClient = function() {
+ this.get = function(aUrl, aCallback) {
+ var anHttpRequest = new XMLHttpRequest();
+ anHttpRequest.onreadystatechange = function() { 
+ if (anHttpRequest.readyState == 4 && anHttpRequest.status == 200)
+ aCallback(anHttpRequest.responseText);
+ }
+ anHttpRequest.open( "GET", aUrl, true ); 
+ anHttpRequest.send( null ); 
+ }
+ }
+ var theurl='https://www.eliftech.com/school-task';
+ var client = new HttpClient();
+ client.get(theurl, function(response) { 
+ var response1 = JSON.parse(response);
+
+
+ document.getElementById("expressions").innerHTML = response1.expressions;
+ document.getElementById("id").innerHTML = response1.id;
+
+var ex = response1.expressions;
+map_exp = ex.map(expression => expression.split(' '));
+//console.log(map_exp);
+
+
+
+var numberStack =[];
+var operatorQueue =[];
+var result;
+
+for(var j = 0; j<map_exp.length;j++ ){
+  var array = map_exp[j];
+  console.log(array);
+
+	for (i = 0; i < array.length; i++) {    
+	  if(!isNaN(array[i])) {
+	    numberStack.push(parseInt(array[i]));  
+	  }else{    
+	    operatorQueue.push(array[i]);    
+	  }
+	  if(numberStack.length > 1 && operatorQueue.length >= 1){
+	    var a = parseInt(numberStack.pop());
+	    var b = parseInt(numberStack.pop());
+	    var result = applyOperator(operatorQueue.shift(), a, b);
+	    numberStack.push(result);    
+	  }
+	}
+
+	function applyOperator(operator, a, b){
+	  if(operator == "+"){
+	    result = a - b;
+	  }else if(operator == "-"){
+	    result = a + b + 8;
+	  }else if(operator == "/"){
+	    if(a==0 || b==0){
+	      result=42;
+	    }else{
+	      result = a/b;
+	    }
+	  }else if(operator == "*"){
+	    if(a==0 || b==0){
+	      result = 42;
+	   }else{
+	      result=a%b;
+	   }
+	  }else{
+	    return "error";
+	  }
+	  console.log("rechnung: " + a + operator + b + " = " + result);
+	  return result;    
+	}  
+};
+
+var arr = [];
+for (var i = 0; i < numberStack.length; i++) {
+    arr.push(Math.floor(numberStack[i]))
+}
+console.log(arr);
+document.getElementById("res").innerHTML = arr;
+
+ var url = "https://u0byf5fk31.execute-api.eu-west-1.amazonaws.com/etschool/task";
+
+
+var data = arr;
+
+var json = JSON.stringify(data);
+
+var xhr = new XMLHttpRequest();
+xhr.open("POST", url, true);
+xhr.setRequestHeader('Content-type','application/json; charset=utf-8');
+xhr.onload = function () {
+	var info = JSON.parse(xhr.responseText);
+	if (xhr.readyState == 4 && xhr.status == "201") {
+		console.table(info);
+	} else {
+		console.error(info);
+	}
+}
+xhr.send(json);
+ }); 
+ </script>
+</head>
+<body>
+<center>
+ Javascript Get Request Test
+ <center>
+ <table border="1">
+	 <tr><td>expressions :</td><td id="expressions"></td></tr>
+	 <tr><td>id :</td><td id="id"></td></tr>
+	 <tr><td>res :</td><td id="res"></td></tr>
+ </table>
+</body>
+</html>
