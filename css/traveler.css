@@ -34,7 +34,7 @@ a:link, a:visited, a:active, a:hover {
 
 header {
   background: #ebebeb;
-  padding: 10px;
+  padding: 10px 10px 0;
 }
 
 header .container section.logo {
@@ -110,11 +110,7 @@ input[type="search"].main-search::-webkit-input-placeholder {
 
 input[type="image"].search-img {
   position: relative;
-}
-
-input[type="image"].search-img mg {
-  position: relative;
-  top: 7px;
+  top: 8px;
   right: 40px;
 }
 
@@ -124,11 +120,51 @@ header .container nav {
 }
 
 header .container nav a {
-  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  flex-basis: 16.5%;
   height: 110px;
-  background: #c45757;
+  background: #ffffff;
+  color: #9c9c9c;
+  border-bottom: 5px solid #6017a3;
+  transition: all .4s;
+}
+
+header .container nav a:hover {
+  transition: all .3s;
+  border-bottom: 1px solid #701dbb;
+  color: #701dbb;
+  transform: translateY(-5px);
 }
 
 header .container nav a:nth-child(-n+5) {
   border-right: 1px solid #d4d4d4;
+}
+
+header .container nav a p {
+  margin: 0;
+  margin-top: -30px;
+  font-family: "PT_Sans-Web-Bold";
+  font-size: 1.063rem;
+}
+
+header section.main-theme {
+  height: 540px;
+  background: url(/img/traveler/br-gr.png) 100% 100% no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header section.main-theme aside {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 140px;
+  width: 140px;
+  background: #451a4a;
+  border-radius: 50%;
 }
