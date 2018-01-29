@@ -108,8 +108,23 @@ input[type="search"].main-search {
     padding-left: 20px;
 }
     input[type="image"].search-img {
+    position: relative;mg {
     position: relative;
     top:7px;
     right: 40px;
+}
+}
+header .container nav{
+display: flex;
+flex-wrap: wrap;
+}
+header .container nav a {
+    &:nth-child(-n+5){
+        border-right: 1px solid #d4d4d4;
+    }
+    flex-grow: 1;
+    flex-basis: 156px
+    height: 110px;
+    background: rgb(196, 87, 87);
 }
 

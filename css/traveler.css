@@ -110,6 +110,25 @@ input[type="search"].main-search::-webkit-input-placeholder {
 
 input[type="image"].search-img {
   position: relative;
+}
+
+input[type="image"].search-img mg {
+  position: relative;
   top: 7px;
   right: 40px;
+}
+
+header .container nav {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+header .container nav a {
+  flex-grow: 1;
+  height: 110px;
+  background: #c45757;
+}
+
+header .container nav a:nth-child(-n+5) {
+  border-right: 1px solid #d4d4d4;
 }
