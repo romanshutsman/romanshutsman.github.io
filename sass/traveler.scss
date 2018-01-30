@@ -1,3 +1,7 @@
+*{
+    margin: 0;
+    padding: 0;
+}
 html {
     font-size: 16px;
 }
@@ -11,6 +15,10 @@ html {
     src: url('../fonts/Nexa-Bold.otf');
 }
 @font-face {
+    font-family: 'Nexa-Book';
+    src: url('../fonts/Nexa-Book.otf');
+}
+@font-face {
     font-family: 'PT_Sans-Web-Bold';
     src: url('../fonts/PT_Sans-Web-Bold.ttf');
 }
@@ -20,6 +28,7 @@ html {
 }
 $nexaBlack: 'Nexa-Black';
 $nexaBold: 'Nexa-Bold';
+$nexaBook: 'Nexa-Book';
 $ptSansItalic: 'PT_Sans-Web-Italic';
 $ptSansBold: 'PT_Sans-Web-Bold';
 
@@ -36,7 +45,7 @@ $lightcolor: #d5d5d5;
 }
 header{
     background: #ebebeb;
-    padding: 10px 10px 0;
+    //padding: 10px 10px 0;
 }
 
 header .container section.logo{
@@ -160,5 +169,30 @@ header section.main-theme{
         width: 140px;
         background: #451a4a;
         border-radius: 50%;
+    }
+}
+
+.help-block{
+    background: #2d2d2d;
+    .container article{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        p:nth-child(1){
+            margin-top: 50px;
+            font-size: 2.25rem;
+            color: #ffffff;
+            font-family: $nexaBook;
+        }
+        p:nth-child(2){
+            margin-bottom: 10px;
+            font-family: $nexaBook;
+            font-size: 0.875rem;
+            color: #a161db;
+        }
+        img{
+            max-width: 940px;
+            width: 100%;
+        }
     }
 }
