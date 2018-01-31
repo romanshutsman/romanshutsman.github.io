@@ -251,3 +251,36 @@ header section.main-theme{
     left: 600px; 
 } */
 
+.laptop{
+    height: 520px;
+    background: #222222;
+    aside{
+        height: 100%;
+    }
+}
+.laptop-img{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.laptop-text{
+    width: 100%;
+    position: absolute;
+    font-family: $nexaBook;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    p{
+        position: relative;
+        top: 350px;
+    }
+    p:nth-child(1){
+        font-size: 2.25rem;
+        color: #ffffff;
+    }
+    p:nth-child(2){
+        color: #a161db;
+        font-family: 0.75rem;
+    }
+}
