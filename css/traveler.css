@@ -180,29 +180,88 @@ header section.main-theme aside {
 
 .help-block {
   background: #2d2d2d;
+  padding-bottom: 100px;
 }
 
-.help-block .container article {
+.help-block .container article:nth-child(1) {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.help-block .container article p:nth-child(1) {
+.help-block .container article:nth-child(1) p:nth-child(1) {
   margin-top: 50px;
   font-size: 2.25rem;
   color: #ffffff;
   font-family: "Nexa-Book";
 }
 
-.help-block .container article p:nth-child(2) {
+.help-block .container article:nth-child(1) p:nth-child(2) {
   margin-bottom: 10px;
   font-family: "Nexa-Book";
   font-size: 0.875rem;
   color: #a161db;
 }
 
-.help-block .container article img {
+.help-block .container article:nth-child(1) img {
   max-width: 940px;
   width: 100%;
 }
+
+.help-block .container article:nth-child(2) {
+  display: flex;
+  flex: row wrap;
+  justify-content: center;
+}
+
+.help-block .container article:nth-child(2) .favour-items {
+  flex-basis: 33.33%;
+}
+
+.help-block .container article:nth-child(2) .favour-items .favour-img {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  height: 100px;
+}
+
+.help-block .container article:nth-child(2) .favour-items .favour-title {
+  margin: 10px 0 15px;
+  font-family: "Nexa-Book";
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+
+.help-block .container article:nth-child(2) .favour-items .favour-desc {
+  max-width: 300px;
+  font-family: "Nexa-Book";
+  font-weight: normal;
+  font-family: 0.75rem;
+  color: #ffffff;
+}
+
+/* .line-wrap {
+    position: relative;
+    background-color: #BCBCBC;
+    width: 100px;
+    height: 0px;
+    padding: 0;
+    margin: 0
+}
+
+.line1 {
+    width: 100px;
+    height: 0px;
+    border-bottom: 2px solid gray;
+    position: absolute;
+     top: 30px;
+    left: 320px;
+}
+.line2 {
+    width: 100px;
+    height: 0px;
+    border-bottom: 2px solid gray;
+    position: absolute;
+     top: 30px;
+    left: 600px; 
+} */
