@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>JavaScript шифрування</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link href="http://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet" />
+		<link href="assets/css/style.css" rel="stylesheet" />
+	</head>
+	<body>
+		<a class="back"></a>
+		<div id="stage">
+			<div id="step1">
+				<div class="content">
+					<h1>Що ти хочеш зробити?</h1>
+					<a class="button encrypt green">Зашифрувати</a>
+					<a class="button decrypt magenta">Розшифрувати</a>
+				</div>
+			</div>
+			<div id="step2">
+				<div class="content if-encrypt">
+					<h1>Виберіть файл для шифрування</h1>
+					<a class="button browse blue">Вибрати</a>
+					<input type="file" id="encrypt-input" />
+				</div>
+				<div class="content if-decrypt">
+					<h1>Виберіть файл для дешифрування!</h1>
+					<h2>Для дешифрування дозволені тільки зашифровані файли!</h2>
+					<a class="button browse blue">Вибрати</a>
+					<input type="file" id="decrypt-input" />
+				</div>
+			</div>
+			<div id="step3">
+				<div class="content if-encrypt">
+					<h1>Введіть ключ</h1>
+					<h2>Введіть ключ який буде використанр для шифрування файлу. Запишіть або запамятайте його, розшифрування без цього ключа неможливе </h2>
+					<input type="password" />
+					<a class="button process red">Encrypt!</a>
+				</div>
+				<div class="content if-decrypt">
+					<h1>Введіть ключ</h1>
+					<h2>Введіть ключ який був використаний для шифрування файлу. Розшифрування без цього ключа неможливе.</h2>
+					<input type="password" />
+					<a class="button process red">Розшифровано!</a>
+				</div>
+			</div>
+			<div id="step4">
+				<div class="content">
+					<h1>Файл готовий!</h1>
+					<a class="button download green">Завантажити</a>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="assets/js/aes.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="assets/js/script.js"></script>
+</html>
